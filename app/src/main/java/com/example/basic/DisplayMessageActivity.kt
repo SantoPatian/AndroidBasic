@@ -17,7 +17,7 @@ class DisplayMessageActivity : AppCompatActivity() {
 
         val message = intent.getStringExtra(EXTRA_MESSAGE)
 
-        textView = binding.textView3
+        textView = binding.contentTextView
         textView.apply {
             text = message
         }
