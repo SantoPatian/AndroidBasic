@@ -16,10 +16,10 @@
         android:textSize="36sp"
         android:textStyle="bold"
         android:gravity="center"
+        android:text="@string/received_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Received Message"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
