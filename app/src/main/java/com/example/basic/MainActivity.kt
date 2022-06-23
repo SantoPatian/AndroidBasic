@@ -14,11 +14,14 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var button: Button
+    private lateinit var editText: EditText
+    private lateinit var message: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+		
         button = binding.sendButton
         button.setOnClickListener {
             sendMessage()
@@ -26,8 +29,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun sendMessage() {
-        val editText = findViewById<EditText>(R.id.editText)
-        val message = editText.text.toString()
+        editText = binding.editText
+        message = editText.text.toString()
         val intent = Intent(this, DisplayMessageActivity::class.java).apply {
             putExtra(EXTRA_MESSAGE, message)
         }
